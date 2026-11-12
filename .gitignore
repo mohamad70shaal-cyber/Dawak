@@ -1,0 +1,38 @@
+# Flutter / Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+*.iml
+.idea/
+.vscode/
+pubspec.lock.bak
+# Secrets — never commit. The anon key is public by design but is still injected at build time.
+.env
+.env.*
+!.env.example
+*.keystore
+*.jks
+key.properties
+google-services.json
+GoogleService-Info.plist
+# Local tooling
+supabase/.temp/
+supabase/.branches/
+.DS_Store
+.flutter-plugins-dependencies
+GoogleService-Info.plist
+*.p8
+*.mobileprovision
+*.provisionprofile
+# Firebase iOS
+GoogleService-Info.plist
+
+# Certificates
+*.p8
+*.mobileprovision
+*.provisionprofile
+
+# Generated Flutter files
+.flutter-plugins-dependencies

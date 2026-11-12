@@ -1,0 +1,32 @@
+# Minimal Supabase CLI configuration for local development.
+# NOT VALIDATED: the Supabase CLI could not be installed in the authoring environment, so this file has not
+# been parsed by the CLI. Compare it with `supabase init` output for your CLI version before relying on it.
+project_id = "dawak"
+
+[api]
+enabled = true
+port = 54321
+# Only `public` is exposed. The `private` schema (internal helpers) must never be listed here.
+schemas = ["public"]
+extra_search_path = ["public", "extensions"]
+# Hard cap on rows returned by any REST request.
+max_rows = 100
+
+[db]
+port = 54322
+major_version = 15
+
+[auth]
+enabled = true
+site_url = "http://localhost:3000"
+enable_signup = true
+minimum_password_length = 8
+# Sign-in is by e-mail + password (confirmed by the product owner).
+
+[auth.email]
+enable_signup = true
+enable_confirmations = true
+
+[storage]
+enabled = true
+file_size_limit = "5MiB"

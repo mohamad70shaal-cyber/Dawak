@@ -1,0 +1,50 @@
+name: dawak
+description: "Dawak (دواك) — find medicines in Syrian pharmacies, reserve them for cash pickup, and run a pharmacy."
+publish_to: "none"
+version: 1.0.0+1
+
+environment:
+  sdk: ">=3.6.0 <4.0.0"
+  flutter: ">=3.27.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  get: ^4.6.6
+  supabase_flutter: ^2.8.0
+  # flutter_localizations pins the exact intl version; `any` lets pub pick the matching one.
+  intl: any
+  shared_preferences: ^2.3.0
+  pdf: ^3.11.0
+  printing: ^5.13.0
+  share_plus: ^10.0.0
+  file_picker: ^8.1.0
+  url_launcher: ^6.3.0
+  # Device GPS (customer search / requests, pharmacy location). Needs the location permissions in docs/release_checklist.md.
+  geolocator: ^13.0.1
+  # Reading an .xlsx price list exported from the pharmacy's program (CSV files are parsed by our own reader).
+  excel: ^4.0.6
+  equatable: ^2.0.5
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^4.0.0
+  mocktail: ^1.0.4
+
+flutter:
+  uses-material-design: true
+  fonts:
+    # Cairo — SIL Open Font License 1.1 (see assets/fonts/OFL.txt).
+    - family: Cairo
+      fonts:
+        - asset: assets/fonts/Cairo_400Regular.ttf
+          weight: 400
+        - asset: assets/fonts/Cairo_500Medium.ttf
+          weight: 500
+        - asset: assets/fonts/Cairo_600SemiBold.ttf
+          weight: 600
+        - asset: assets/fonts/Cairo_700Bold.ttf
+          weight: 700
